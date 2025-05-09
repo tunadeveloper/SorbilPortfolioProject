@@ -1,0 +1,55 @@
+﻿@model List<Home>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+@await Html.PartialAsync("/Views/Default/Head.cshtml")
+<body>
+    <!-- Header Bölümü -->
+    @await Html.PartialAsync("/Views/Default/Header.cshtml")
+
+    <!-- Anasayfa Bölümü -->
+    <section id="anasayfa" class="section">
+        <div class="container">
+            @foreach (var item in Model)
+            {
+                <div class="hero-content">
+                    <div class="profile-image">
+                    <img src="@item.ImageUrl" alt="Profil Resmi" id="mainProfile">
+                </div>
+                <div class="hero-text">
+                    <h1 class="glitch" data-text="Hoş Geldiniz">Hoş Geldiniz</h1>
+                    <p class="name">Ben <span class="highlight">@item.NameSurname</span></p>
+                    <p class="title">@item.PositionName</p>
+                    <div class="cta-buttons">
+                        <a href="#hakkimda" class="btn primary">Hakkımda</a>
+                        <a href="#iletisim" class="btn secondary">İletişime Geç</a>
+                        </div>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımda Bölümü -->
+    @await Html.PartialAsync("/Views/Default/About.cshtml", ViewBag.AboutList as List<About>)
+
+    <!-- İletişim Bölümü -->
+    @await Html.PartialAsync("/Views/Default/Contact.cshtml", ViewBag.ContactList as List<Contact>)
+
+    <script src="/PortfolyoTemplate/js/main.js"></script>
+</body>
+</html>

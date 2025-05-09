@@ -1,0 +1,25 @@
+﻿@model List<Contact>
+<section id="iletisim" class="section">
+    <div class="container">
+        <h2 class="section-title">İletişim</h2>
+        <div class="contact-content">
+            @foreach (var item in Model){
+ <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>@item.Email</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>@item.Phone</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>@item.Address</p>
+                </div>
+            </div>
+            }
+           
+        </div>
+    </div>
+</section>

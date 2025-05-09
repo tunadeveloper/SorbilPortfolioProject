@@ -1,0 +1,17 @@
+﻿@model List<About>
+
+<section id="hakkimda" class="section">
+    <div class="container">
+        <h2 class="section-title">Hakkımda</h2>
+        @foreach (var item in Model) { 
+        <div class="about-content">
+            <div class="about-image">
+                <img src="@item.ImageUrl" alt="Hakkımda Resmi" id="aboutProfile">
+            </div>
+            <div class="about-text">
+                <p>@item.Description</p>
+            </div>
+        </div>
+        }
+    </div>
+</section>
