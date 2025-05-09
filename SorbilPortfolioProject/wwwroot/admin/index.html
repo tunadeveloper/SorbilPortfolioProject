@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2><i class="fas fa-user-shield"></i> Admin Panel</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="#anasayfa"><i class="fas fa-home"></i> Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="#hakkimda"><i class="fas fa-user"></i> Hakkımda</a>
+                    </li>
+                    <li>
+                        <a href="#iletisim"><i class="fas fa-envelope"></i> İletişim</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../index.html" class="view-site">
+                    <i class="fas fa-external-link-alt"></i> Siteyi Görüntüle
+                </a>
+            </div>
+        </aside>
+
+        <!-- Ana İçerik -->
+        <main class="main-content">
+            <!-- Anasayfa Bölümü -->
+            <section id="anasayfa" class="content-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-home"></i> Anasayfa Düzenle</h2>
+                </div>
+                <form id="homeForm" class="admin-form">
+                    
+                    <div class="form-group">
+                        <label for="homeName">İsim</label>
+                        <input type="text" id="homeName" placeholder="Adınız Soyadınız">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeTitle">Ünvan</label>
+                        <input type="text" id="homeTitle" placeholder="ÖRN. Web Geliştirici & Tasarımcı">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeTitle">Profil Resmi</label>
+                        <input type="text" id="homeImage" placeholder="https://example.com/profile.jpg">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">
+                            <i class="fas fa-save"></i> Kaydet
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Hakkımda Bölümü -->
+            <section id="hakkimda" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user"></i> Hakkımda Düzenle</h2>
+                </div>
+                <form id="aboutForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="aboutText">Hakkımda Metni</label>
+                        <textarea id="aboutText" rows="5" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="homeTitle">Hakkımda Resmi</label>
+                        <input type="text" id="aboutImage" placeholder="https://example.com/profile.jpg">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">
+                            <i class="fas fa-save"></i> Kaydet
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- İletişim Bölümü -->
+            <section id="iletisim" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-envelope"></i> İletişim Bilgileri Düzenle</h2>
+                </div>
+                <form id="contactForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="email">E-posta</label>
+                        <input type="email" id="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" placeholder="+90 555 555 55 55">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Adres</label>
+                        <input type="text" id="address" placeholder="İstanbul, Türkiye">
+                    </div>
+                   
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">
+                            <i class="fas fa-save"></i> Kaydet
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html> 
