@@ -1,0 +1,39 @@
+﻿@model Home
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-sm-12">
+    <div class="card">
+        <div class="card-header">
+            <h5>Anasayfa Düzenleme Sayfası</h5>
+
+        </div>
+        <div class="card-block">
+            <form method="post">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ad Soyad</label>
+                    <div class="col-sm-10 mb-3">
+                        <input type="text" class="form-control" name="NameSurname" value="@Model.NameSurname">
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Pozisyon Adı</label>
+                    <div class="col-sm-10 mb-3">
+                        <input type="text" class="form-control" name="PositionName" value="@Model.PositionName">
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Görsel URL</label>
+                    <div class="col-sm-10 mb-4">
+                        <input type="text" class="form-control" name="ImageUrl" value="@Model.ImageUrl">
+                    </div>
+
+                    <div class="col-sm-12 text-end">
+                        <button class="btn btn-success">Güncelle</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

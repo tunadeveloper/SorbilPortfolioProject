@@ -6,27 +6,22 @@ namespace SorbilPortfolioProject.Controllers
     public class AdminHomeController : Controller
     {
         Context context = new Context();
-        int id = 1;
-        [HttpGet]
-        public IActionResult UpdateHome()
+        public IActionResult Index()
         {
-            
-            var value = context.Homes.Find(id);
-            return View(value);
+            var values = context.Homes.Find(1);
+            return View(values);
         }
 
         [HttpPost]
-        public IActionResult UpdateHome(Home home)
+        public IActionResult Index(Home home)
         {
-            var value = context.Homes.Find(id);
-            value.NameSurname = home.NameSurname;
-            value.PositionName = home.PositionName;
-            value.ImageUrl = home.ImageUrl;
+            var values = context.Homes.Find(1);
+            values.NameSurname = home.NameSurname;
+            values.PositionName = home.PositionName;
+            values.ImageUrl = home.ImageUrl;
 
             context.SaveChanges();
-            return RedirectToAction("UpdateHome");
+            return View(values);
         }
-
-
     }
 }

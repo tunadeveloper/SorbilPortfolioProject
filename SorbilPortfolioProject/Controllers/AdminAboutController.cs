@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SorbilPortfolioProject.Models;
+using System.Drawing;
 
 namespace SorbilPortfolioProject.Controllers
 {
@@ -16,13 +17,13 @@ namespace SorbilPortfolioProject.Controllers
         [HttpPost]
         public IActionResult Index(About about)
         {
-            var value = context.Abouts.Find(id);
+            var values = context.Abouts.Find(id);
 
-            value.Description = about.Description;
-            value.ImageUrl = about.ImageUrl;
+            values.Description = about.Description;
+            values.ImageUrl = about.ImageUrl;
 
             context.SaveChanges();
-            return RedirectToAction("Index");
+            return View(values);
         }
     }
 }

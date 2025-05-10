@@ -1,0 +1,40 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-sm-12">
+    <div class="card">
+        <div class="card-header">
+            <h5>İletişim Düzenleme Sayfası</h5>
+
+        </div>
+        <div class="card-block">
+            <form method="post">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">E-Posta</label>
+                    <div class="col-sm-10 mb-3">
+                        <input type="email" class="form-control" name="Email" value="@Model.Email">
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Telefon Numarası</label>
+                    <div class="col-sm-10 mb-3">
+                        <input type="text" class="form-control" name="Phone" value="@Model.Phone">
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Adres</label>
+                    <div class="col-sm-10 mb-4">
+                        <input type="text" class="form-control" name="Address" value="@Model.Address">
+                    </div>
+
+                    <div class="col-sm-12 text-end">
+                        <button class="btn btn-success">Güncelle</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
